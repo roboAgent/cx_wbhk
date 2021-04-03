@@ -1,0 +1,33 @@
+1- create an account for mongo db atlas using this link
+https://account.mongodb.com/account/login
+
+2- create project and name it
+
+3- visit network access then add ip address 0.0.0.0/0 to access list entry then choose allow accesss from anywhere
+
+4- visit clusters and choose build a cluster  choose Shared Cluster (free)
+then keep everything as default then create cluster
+
+5- press connect on Cluster0 (default name) takes long time
+then create db user (username and password) and save those credentials then choose create user
+then choose connection method then choose connect to your application
+then copy db string (will be similar to mongodb+srv://sherif:<password>@cluster0.aotht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority)
+then close
+
+
+6- choose collections then choose add my own data
+then choose database name to be (robo_agent_db) and collection name (robo_agent_db_c) press create
+then go to file main.py line 238 and 314 and format your db string taken before similar to the following
+
+if your db string is
+mongodb+srv://sherif:<password>@cluster0.aotht.mongodb.net/myFirstDatabase?retryWrites=true&w=majority)
+
+dbname='robo_agent_db'
+dbstring = "mongodb+srv://" + user + ':' + password + "@cluster0.aotht.mongodb.net/" + dbname + "?retryWrites=true&w=majority"
+
+don't forget to apply changes to both line 238 and 314
+then add your db user (username and password instead of mine in line 309) mine is ( username is sherif and password is sherif)
+
+
+
+

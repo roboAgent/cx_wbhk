@@ -1,0 +1,42 @@
+1- create google cloud project and enable billing to it 
+
+2- run 
+> gcloud init 
+to initialize google cloud with your account in the same folder as your main files
+
+
+3- project structure 
+
+> main.py
+> requirements.txt
+> other python files
+> app.yaml  
+
+
+4- open app.yaml and write inside 
+
+runtime: python37
+
+
+5- enable cloud build API
+> gcloud services enable cloudbuild.googleapis.com
+
+
+6- initialize App Engine 
+
+> gcloud app create --project=MY-PROJECT-ID
+
+
+7- deploy
+> gcloud app deploy
+
+
+8- to read logs or your gcloud app
+
+for live logs
+> gcloud app logs tail
+
+for stored logs
+> gcloud app logs read
+
+
