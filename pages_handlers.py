@@ -5,7 +5,6 @@ from helpers import *
 import datetime
 
 backend_URL="https://robo-agent.uc.r.appspot.com"
-# backend_URL="https://af87d329529a.ngrok.io"
 
 
 def page_zip_code(main_request):
